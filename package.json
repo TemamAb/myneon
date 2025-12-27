@@ -20,7 +20,7 @@
     "zod-validation-error": "^5.0.0"
   },
   "scripts": {
-    "start": "vite",
+    "start": "vite build && vite preview",
     "build": "vite build",
     "preview": "vite preview"
   },
