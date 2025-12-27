@@ -3,7 +3,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { DeploymentReport, Environment } from "../types";
 
 // Fixed: Initialize GoogleGenAI strictly with process.env.API_KEY as per mandatory guidelines
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.AI_INTEGRATIONS_GEMINI_API_KEY, httpOptions: { apiVersion: "", baseUrl: process.env.AI_INTEGRATIONS_GEMINI_BASE_URL } });
 
 export const performSpecialistDeployment = async (moduleName: string, env: Environment): Promise<DeploymentReport> => {
   try {

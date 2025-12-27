@@ -6,7 +6,13 @@ export const generateArchitectureVideo = async (
   mimeType: string,
   aspectRatio: '16:9' | '9:16' = '16:9'
 ): Promise<string> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({
+    apiKey: process.env.AI_INTEGRATIONS_GEMINI_API_KEY,
+    httpOptions: {
+      apiVersion: "",
+      baseUrl: process.env.AI_INTEGRATIONS_GEMINI_BASE_URL,
+    },
+  });
   
   try {
     let operation = await ai.models.generateVideos({
