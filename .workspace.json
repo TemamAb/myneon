@@ -1,0 +1,40 @@
+
+{
+  "workspaceId": "AstraElite-IX-Cluster-7.0",
+  "version": "1.0.0-IX",
+  "engineGrade": "0.001%",
+  "modules": [
+    {
+      "id": "dashboard-ui",
+      "name": "Dashboard UI",
+      "description": "Primary high-fidelity monitoring and orchestration interface for the flash loan mesh.",
+      "autoLoad": true,
+      "entryPoint": "App.tsx",
+      "tier": "Core-System",
+      "capabilities": [
+        "Real-time Telemetry",
+        "Agent Handshake Visualizer",
+        "Protocol Verification Hub"
+      ],
+      "watchPatterns": [
+        "components/**/*.tsx",
+        "services/**/*.ts"
+      ]
+    },
+    {
+      "id": "data-aggregator",
+      "name": "Data Aggregator",
+      "path": "services/specialistService.ts",
+      "autoLoad": false,
+      "tier": "Tier-1: Scanner"
+    }
+  ],
+  "extensionConfig": {
+    "autoDiscoverModules": true,
+    "hotReloadAgents": true,
+    "benchmarking": {
+      "target": "Top-001-Elite",
+      "latencyNsThreshold": 2000000
+    }
+  }
+}

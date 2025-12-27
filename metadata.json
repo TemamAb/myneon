@@ -1,0 +1,7 @@
+{
+  "name": "AION VIX Sovereign Forge",
+  "description": "The elite-grade architectural forge for AION VIX: the world's most advanced high-performance arbitrage flash loan engine.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
