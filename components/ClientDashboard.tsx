@@ -117,8 +117,22 @@ const ClientDashboard: React.FC<Props> = ({ profile, onToggleView, engineStats: 
               </div>
             </div>
 
-            {/* STATUS BAR */}
             <div className="pt-20 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+              <div className={`flex flex-col items-center gap-1 px-6 py-3 rounded-2xl border bg-white/[0.01] ${isLive ? 'border-amber-500/20' : 'border-white/5'}`}>
+                <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Profit / Hr</span>
+                <span className={`text-lg font-mono font-black ${isLive ? 'text-amber-400' : 'text-blue-400'}`}>$412.80</span>
+              </div>
+              <div className={`flex flex-col items-center gap-1 px-6 py-3 rounded-2xl border bg-white/[0.01] ${isLive ? 'border-amber-500/20' : 'border-white/5'}`}>
+                <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Profit / Trade</span>
+                <span className={`text-lg font-mono font-black ${isLive ? 'text-amber-400' : 'text-emerald-400'}`}>$8.45</span>
+              </div>
+              <div className={`flex flex-col items-center gap-1 px-6 py-3 rounded-2xl border bg-white/[0.01] ${isLive ? 'border-amber-500/20' : 'border-white/5'}`}>
+                <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Trades / Hr</span>
+                <span className={`text-lg font-mono font-black ${isLive ? 'text-amber-400' : 'text-amber-400'}`}>48.2</span>
+              </div>
+            </div>
+
+            <div className="pt-10 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
               <div className={`flex items-center gap-3 px-6 py-2 rounded-full border bg-white/[0.01] ${isLive ? 'border-amber-500/20' : 'border-white/5'}`}>
                 <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol</span>
                 <span className={`text-[9px] font-black uppercase tracking-widest ${isLive ? 'text-amber-400' : 'text-blue-400'}`}>AION-V9</span>
