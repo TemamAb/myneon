@@ -1,11 +1,10 @@
 {
   "name": "production-dashboard",
   "version": "1.0.0",
-  "description": "Production Dashboard for Render",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "echo 'Dashboard ready' && exit 0"
+    "build": "echo 'Static dashboard - no build needed'"
   },
   "engines": {
     "node": ">=16.0.0"
