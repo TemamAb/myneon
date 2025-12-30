@@ -1,11 +1,5 @@
 services:
   - type: web
-    name: aion-architect
-    env: node
-    buildCommand: npm run build
-    startCommand: npm start
-    envVars:
-      - key: NODE_VERSION
-        value: 18.17.0
-    healthCheckPath: /health
-    autoDeploy: true
+    name: aion-production
+    env: static
+    staticPublishPath: ./public
